@@ -12,6 +12,8 @@ captures/
 *.keystore
 app/release/
 app/build/
+.kotlin/
+_/
 
 # AOT-compiled model binaries — keep .tflite tracked but ignore intermediates
 app/src/main/assets/models/*.bin
