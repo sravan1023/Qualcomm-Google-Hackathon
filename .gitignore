@@ -1,0 +1,18 @@
+*.iml
+.gradle/
+local.properties
+.idea/
+.DS_Store
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.keystore
+app/release/
+app/build/
+
+# AOT-compiled model binaries — keep .tflite tracked but ignore intermediates
+app/src/main/assets/models/*.bin
+app/src/main/assets/models/*.dlc

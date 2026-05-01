@@ -1,0 +1,54 @@
+{
+    "model_id": "yolo26_det",
+    "model_name": "YOLO26-Detection",
+    "runtime": "tflite",
+    "precision": "float",
+    "tool_versions": {
+        "qairt": "2.45.0.260326154327",
+        "litert": "1.4.3"
+    },
+    "model_files": {
+        "yolo26_det.tflite": {
+            "inputs": {
+                "image": {
+                    "shape": [
+                        1,
+                        640,
+                        640,
+                        3
+                    ],
+                    "dtype": "float32",
+                    "io_type": "image",
+                    "image_metadata": {}
+                }
+            },
+            "outputs": {
+                "boxes": {
+                    "shape": [
+                        1,
+                        8400,
+                        4
+                    ],
+                    "dtype": "float32"
+                },
+                "scores": {
+                    "shape": [
+                        1,
+                        8400
+                    ],
+                    "dtype": "float32"
+                },
+                "class_idx": {
+                    "shape": [
+                        1,
+                        8400
+                    ],
+                    "dtype": "uint8"
+                }
+            }
+        }
+    },
+    "supplementary_files": {
+        "labels.txt": "Mapping of model prediction indices -> string labels."
+    }
+}

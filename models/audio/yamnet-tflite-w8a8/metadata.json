@@ -1,0 +1,42 @@
+{
+    "model_id": "yamnet",
+    "model_name": "YamNet",
+    "runtime": "tflite",
+    "precision": "w8a8",
+    "tool_versions": {
+        "qairt": "2.45.0.260326154327",
+        "litert": "1.4.2"
+    },
+    "model_files": {
+        "yamnet.tflite": {
+            "inputs": {
+                "audio": {
+                    "shape": [
+                        1,
+                        1,
+                        96,
+                        64
+                    ],
+                    "dtype": "uint8",
+                    "quantization_parameters": {
+                        "scale": 0.04793788492679596,
+                        "zero_point": 144
+                    }
+                }
+            },
+            "outputs": {
+                "class_scores": {
+                    "shape": [
+                        1,
+                        521
+                    ],
+                    "dtype": "uint8",
+                    "quantization_parameters": {
+                        "scale": 0.7565417289733887,
+                        "zero_point": 190
+                    }
+                }
+            }
+        }
+    }
+}
